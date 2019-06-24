@@ -3,8 +3,9 @@
     [
         {
             "text": "首页",
-            "target": "index.md",
-            "toc": false
+            "target": "note.json",
+            "navi": true,
+            "navi_index": "../README.md"
         },
         {
             "text": "个人总结",
@@ -34,6 +35,11 @@
             "text": "imuncle",
             "icon": "https://imuncle.github.io/images/avatar.jpg",
             "target": "https://imuncle.github.io"
+        },
+        {
+            "text": "github",
+            "icon": "https://github.com/fluidicon.png",
+            "target": "https://github.com/HITszRM/wiki"
         }
     ]
 }
