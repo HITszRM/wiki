@@ -3,9 +3,8 @@
     [
         {
             "text": "首页",
-            "target": "note.json",
-            "navi": true,
-            "navi_index": "../README.md"
+            "target": "index.md",
+            "toc": true
         },
         {
             "text": "个人总结",
