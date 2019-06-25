@@ -53,7 +53,7 @@ git push origin master
 ## 如何修改文件
 在根目录下有两个文件很重要：`viki.json`和`navigation.json`。
 
-`viki,json`里面是系统配置，可设置网站标题、图标、页脚信息、Markdown解析配置等，建议不要轻易修改。
+`viki.json`里面是系统配置，可设置网站标题、图标、页脚信息、Markdown解析配置等，建议不要轻易修改。
 
 `navigation.json`里面配置的是网页的顶部导航栏，以及每一页的内容，具体如下：
 ```json
