@@ -1,18 +1,23 @@
 {
     "created_time": "2019-06-23T06:03:38Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "attachments": [
-            ],
-            "created_time": "2018-11-18T03:25:09Z",
-            "modified_time": "2018-11-18T03:43:09Z",
-            "name": "谢胜.md",
-            "tags": [
-            ]
-        }
     ],
     "sub_directories": [
+        {
+            "name": "电控组"
+        },
+        {
+            "name": "视觉组"
+        },
+        {
+            "name": "机械组"
+        },
+        {
+            "name": "硬件组"
+        },
+        {
+            "name": "运营组"
+        }
     ],
     "version": "1"
 }
