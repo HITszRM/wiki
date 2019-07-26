@@ -5,6 +5,9 @@
     "sub_directories": [
         {
             "name": "2019"
+        },
+        {
+            "name": "2020"
         }
     ],
     "version": "1"
