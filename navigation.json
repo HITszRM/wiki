@@ -26,6 +26,11 @@
             "text": "技术文档",
             "navi": true,
             "target": "tech/note.json"
+        },
+        {
+            "text": "培训文档",
+            "navi": true,
+            "target": "train/note.json"
         }
     ],
     "actions":
