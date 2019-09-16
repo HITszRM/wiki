@@ -8,8 +8,13 @@ a {
     word-break: break-all;
 }
 
+p {
+    text-indent: 2em;
+}
+
 .viki-img-package {
     text-align: center;
+    text-indent: 0;
 }
 
 img.viki-img-center {
