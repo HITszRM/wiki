@@ -254,8 +254,11 @@ __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 ```
 
 ## 第五步：串口通信实验
-* 可以实现printf功能
+* TX和RX短接，自己给自己发信息
+* 实现printf功能
 ```c
+#include "stdio.h"
+
 #pragma import(__use_no_semihosting)
 //标准库需要的支持函数
 struct __FILE
@@ -276,6 +279,7 @@ int fputc(int ch, FILE *f)
 	return ch;
 }
 ```
+> 注意要勾选`Use MicroLIB`
 
 # 参考
 * [基于STM32之UART串口通信协议（一）详解](https://www.cnblogs.com/ChurF-Lin/p/10793111.html)
