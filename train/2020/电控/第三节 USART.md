@@ -108,7 +108,7 @@ IDLE：监测到总线空闲 (IDLE line detected)
 ### 控制寄存器(USART_CRx)
 有CR1、CR2、CR3三个寄存器，具体的配置较复杂，就不展开讲了，具体的可以参考《STM32中文参考手册》。
 
-## 第四步：USART API
+## 第五步：USART API
 ### 接收
 ```c
 /**
@@ -253,7 +253,7 @@ __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 }
 ```
 
-## 第五步：串口通信实验
+## 第六步：串口通信实验
 * TX和RX短接，自己给自己发信息
 * 实现printf功能
 ```c
