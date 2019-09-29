@@ -254,32 +254,33 @@ HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint
 ## 第六步：FLASH读写实验
 ```c
 /*FLASH写入程序*/
-void writeFlashTest(uint32_t addr, uint32_t WriteFlashData)
+void writeFlash(uint32_t addr, uint32_t WriteFlashData)
 {
-	/* 1/4解锁FLASH*/
-	HAL_FLASH_Unlock();
+    /* 1/4解锁FLASH*/
+    HAL_FLASH_Unlock();
 
-	/* 2/4擦除FLASH*/
-	/*初始化FLASH_EraseInitTypeDef*/
-	FLASH_EraseInitTypeDef FlashSet;
-	FlashSet.TypeErase = FLASH_TYPEERASE_SECTORS;
-	FlashSet.NbSectors = 1;
-	FlashSet.Sector = FLASH_SECTOR_7;
-	FlashSet.VoltageRange = FLASH_VOLTAGE_RANGE_3;
-	
-	/*设置PageError，调用擦除函数*/
-	uint32_t PageError = 0;
-	HAL_FLASHEx_Erase(&FlashSet, &PageError);
+    /* 2/4擦除FLASH*/
+    /*初始化FLASH_EraseInitTypeDef*/
+    FLASH_EraseInitTypeDef FlashSet;
+    FlashSet.TypeErase = FLASH_TYPEERASE_PAGES;
+    FlashSet.Banks = FLASH_BANK_1;
+    FlashSet.PageAddress = addr;
+    FlashSet.NbPages = 1;
 
-	/* 3/4对FLASH烧写*/
-	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, addr, WriteFlashData);
+    /*设置PageError，调用擦除函数*/
 
-	/* 4/4锁住FLASH*/
-	HAL_FLASH_Lock();
+    uint32_t PageError = 0;
+    HAL_FLASHEx_Erase(&FlashSet, &PageError);
+
+    /* 3/4对FLASH烧写*/
+    HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, addr, WriteFlashData);
+
+    /* 4/4锁住FLASH*/
+    HAL_FLASH_Lock();
 }
 
 /*FLASH读取程序*/
-uint32_t printFlashTest(uint32_t addr)
+uint32_t readFlash(uint32_t addr)
 {
 	uint32_t temp = *(__IO uint32_t*)(addr);
 	return temp;
