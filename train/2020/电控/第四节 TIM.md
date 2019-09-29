@@ -296,7 +296,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     tim4_last_count = tim4_count;
     if(flag == 0)
     {
-        tim4_count = TIM4->CNT;
+        tim4_count = TIM4->CCR4;
         low_time = tim4_count - tim4_last_count;
 				if(low_time < 0) low_time += 19999;
 				else low_time += 1;
@@ -306,7 +306,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     }
     else if(flag == 1)
     {
-        tim4_count = TIM4->CNT;
+        tim4_count = TIM4->CCR4;
         high_time = tim4_count - tim4_last_count+1;
 				TIM_RESET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4);
         TIM_SET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4, TIM_ICPOLARITY_RISING);
