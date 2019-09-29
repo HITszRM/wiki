@@ -285,5 +285,35 @@ __weak void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 ## 第七步：实现输入捕获实验
 读取第六步输出的PWM一个周期内的高电平时间和低电平时间。
 
+```c
+int high_time, low_time;
+int tim4_count, tim4_last_count;
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+    static uint8_t flag = 0; //0代表上升沿触发；1代表下降沿触发
+
+    tim4_last_count = tim4_count;
+    if(flag == 0)
+    {
+        tim4_count = TIM4->CNT;
+        low_time = tim4_count - tim4_last_count;
+				if(low_time < 0) low_time += 19999;
+				else low_time += 1;
+        TIM_RESET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4);
+        TIM_SET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4, TIM_ICPOLARITY_FALLING);
+        flag = 1;
+    }
+    else if(flag == 1)
+    {
+        tim4_count = TIM4->CNT;
+        high_time = tim4_count - tim4_last_count+1;
+				TIM_RESET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4);
+        TIM_SET_CAPTUREPOLARITY(&htim4, TIM_CHANNEL_4, TIM_ICPOLARITY_RISING);
+        flag = 0;
+    }
+}
+```
+
 # 参考
 * 《STM32中文参考手册》
