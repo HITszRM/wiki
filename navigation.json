@@ -7,6 +7,12 @@
             "toc": true
         },
         {
+            "text": "组织架构",
+            "target": "organization/note.json",
+            "navi": true,
+            "navi_index": "organization.md"
+        },
+        {
             "text": "个人总结",
             "target": "experience/note.json",
             "navi": true,
