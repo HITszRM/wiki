@@ -32,6 +32,11 @@
             "text": "培训文档",
             "navi": true,
             "target": "train/note.json"
+        },
+        {
+            "text": "活动记录",
+            "navi": true,
+            "target": "train/note.json"
         }
     ],
     "actions":
