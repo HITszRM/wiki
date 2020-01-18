@@ -13,20 +13,15 @@
             "navi_index": "organization.md"
         },
         {
+            "text": "比赛",
+            "target": "competition/note.json",
+            "navi": true
+        },
+        {
             "text": "个人总结",
             "target": "experience/note.json",
             "navi": true,
             "navi_index": "experience.md"
-        },
-        {
-            "text": "会议记录",
-            "target": "record/note.json",
-            "navi": true
-        },
-        {
-            "text": "经费使用",
-            "navi": true,
-            "target": "money/note.json"
         },
         {
             "text": "技术文档",
