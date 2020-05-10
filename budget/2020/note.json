@@ -43,9 +43,6 @@
         }
     ],
     "sub_directories": [
-        {
-            "name": "会议记录"
-        }
     ],
     "version": "1"
 }
