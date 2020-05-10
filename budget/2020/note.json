@@ -1,0 +1,51 @@
+{
+    "created_time": "2019-06-23T06:03:38Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-11-18T03:25:09Z",
+            "modified_time": "2018-11-18T03:43:09Z",
+            "name": "团队预选表.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-11-18T03:25:09Z",
+            "modified_time": "2018-11-18T03:43:09Z",
+            "name": "支出流水表.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-11-18T03:25:09Z",
+            "modified_time": "2018-11-18T03:43:09Z",
+            "name": "兵种BOM表.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-11-18T03:25:09Z",
+            "modified_time": "2018-11-18T03:43:09Z",
+            "name": "成本分析.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+        {
+            "name": "会议记录"
+        }
+    ],
+    "version": "1"
+}

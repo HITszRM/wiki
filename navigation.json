@@ -7,36 +7,24 @@
             "toc": true
         },
         {
-            "text": "组织架构",
-            "target": "organization/note.json",
-            "navi": true,
-            "navi_index": "organization.md"
-        },
-        {
-            "text": "比赛",
-            "target": "competition/note.json",
+            "text": "团队信息库",
+            "target": "information/note.json",
             "navi": true
         },
         {
-            "text": "个人总结",
-            "target": "experience/note.json",
-            "navi": true,
-            "navi_index": "experience.md"
+            "text": "项目进度",
+            "target": "progress/note.json",
+            "navi": true
         },
         {
-            "text": "技术文档",
-            "navi": true,
-            "target": "tech/note.json"
+            "text": "成本预算",
+            "target": "budget/note.json",
+            "navi": true
         },
         {
-            "text": "培训文档",
+            "text": "团队事项",
             "navi": true,
-            "target": "train/note.json"
-        },
-        {
-            "text": "活动记录",
-            "navi": true,
-            "target": "activity/note.json"
+            "target": "team/note.json"
         }
     ],
     "actions":
